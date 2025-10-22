@@ -1,10 +1,19 @@
 import { FaEye, FaStar } from "react-icons/fa";
 import { GoShareAndroid } from "react-icons/go";
 import { PiBookmarkSimple } from "react-icons/pi";
+import { Link } from "react-router";
 
 const NewsCard = ({ news }) => {
-  const { title, author, rating, total_view, thumbnail_url, details, tags } =
-    news;
+  const {
+    id,
+    title,
+    author,
+    rating,
+    total_view,
+    thumbnail_url,
+    details,
+    tags,
+  } = news;
 
   return (
     <div className="card bg-base-100 shadow-xl border-0 rounded-xl overflow-hidden">
@@ -46,9 +55,12 @@ const NewsCard = ({ news }) => {
       <div className="p-4">
         <p className="text-gray-600 text-sm mt-2">
           {details.slice(0, 200)}...
-          <span className="text-primary font-semibold cursor-pointer">
+          <Link
+            to={`/news-details/${id}`}
+            className="text-primary font-semibold cursor-pointer"
+          >
             Read More
-          </span>
+          </Link>
         </p>
 
         {/* Tags */}

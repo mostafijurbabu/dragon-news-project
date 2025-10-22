@@ -3,8 +3,8 @@ import { Outlet } from "react-router";
 import Header from "../Components/Header";
 import LatestNews from "../Components/LatestNews";
 import Navbar from "../Components/Navbar";
-import LeftAside from "../Components/Homelayout/LeftAside";
-import RightAside from "../Components/Homelayout/RightAside";
+import LeftAside from "../Components/HomeLayout/LeftAside";
+import RightAside from "../Components/HomeLayout/RightAside";
 
 const HomeLayout = () => {
   return (
